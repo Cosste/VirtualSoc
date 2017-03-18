@@ -1,0 +1,38 @@
+<div id="loginContent">
+    <div class="text-center">
+        <div class="square">
+            <div class="square-content row">
+                <div class="login text-center">
+                    <h2>Welcome!</h2>
+                </div>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <!--<label class="control-label col-sm-2" for="username">Username:</label> -->
+                        <div class="inputCredentials">
+                            <input type="text" class="form-control" id="username" name="username" maxlength="20"
+                                   placeholder="Enter username" ng-model="user.username" required><br/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <!--<label class="control-label col-sm-2" for="pwd">Password:</label> -->
+                        <div class="inputCredentials">
+                            <input type="password" class="form-control" id="pwd" name="password" maxlength="40"
+                                   placeholder="Enter password" ng-model="user.password" required><br/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="">
+                            <input type="submit" class="btn btn-default" ng-click="login(user)" value="Login">
+                        </div>
+                    </div>
+                </form>
+                <div class="login text-center">
+                    <h4>Click here to <a ng-href="/register">sign up</a>.</h4>
+                </div>
+                <div>
+                    <h4>{{message}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

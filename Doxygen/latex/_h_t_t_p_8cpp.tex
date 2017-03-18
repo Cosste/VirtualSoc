@@ -1,0 +1,124 @@
+\hypertarget{_h_t_t_p_8cpp}{}\section{H\+T\+T\+P.\+cpp File Reference}
+\label{_h_t_t_p_8cpp}\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+{\ttfamily \#include \char`\"{}H\+T\+T\+P.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_h_t_t_p_8cpp_aba51915c87d64af47fb1cc59348961c9}{OK}~true
+\item 
+\#define \hyperlink{_h_t_t_p_8cpp_ae2332e4f11de1236d2fc0154ed9951c9}{N\+O\+T\+\_\+\+OK}~false
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_h_t_t_p_8cpp_aed44f2a681cec5e1c16558767dcf49e2}{G\+E\+T\+\_\+method} (\hyperlink{class_request}{Request} \&request, \hyperlink{class_session}{Session} \&session)
+\item 
+bool \hyperlink{_h_t_t_p_8cpp_ab0b612902120c5ebca1ddf79efd6b560}{P\+O\+S\+T\+\_\+method} (\hyperlink{class_request}{Request} \&request, \hyperlink{class_session}{Session} \&session)
+\item 
+int \hyperlink{_h_t_t_p_8cpp_a98544220d2c2ae44fd57915286ab9474}{callback} (void $\ast$values, int number\+\_\+of\+\_\+columns, char $\ast$$\ast$data, char $\ast$$\ast$columns)
+\item 
+void \hyperlink{_h_t_t_p_8cpp_ae45ccebdec61fc5613d0926deee5c0a2}{sha256} (char $\ast$string, char output\+Buffer\mbox{[}65\mbox{]})
+\item 
+bool \hyperlink{_h_t_t_p_8cpp_ad4ef971baba2aa2c19b7e6ac7549e190}{prepare\+\_\+sql\+\_\+command} (\hyperlink{class_request}{Request} \&request, \hyperlink{class_session}{Session} \&session, std\+::string \&sql)
+\item 
+void \hyperlink{_h_t_t_p_8cpp_a35c11bb2e980faa29fa366c73b9962a5}{hash\+\_\+password} (\hyperlink{class_request}{Request} \&request)
+\item 
+void \hyperlink{_h_t_t_p_8cpp_a29ed7423f3abc01d8193f02adbc6cdf0}{handle\+\_\+response} (\hyperlink{class_request}{Request} \&request, std\+::vector$<$ std\+::vector$<$ std\+::string $>$$>$ \&table, const bool status, \hyperlink{class_session}{Session} \&session)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_h_t_t_p_8cpp_ae2332e4f11de1236d2fc0154ed9951c9}\label{_h_t_t_p_8cpp_ae2332e4f11de1236d2fc0154ed9951c9}} 
+\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}!N\+O\+T\+\_\+\+OK@{N\+O\+T\+\_\+\+OK}}
+\index{N\+O\+T\+\_\+\+OK@{N\+O\+T\+\_\+\+OK}!H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+\subsubsection{\texorpdfstring{N\+O\+T\+\_\+\+OK}{NOT\_OK}}
+{\footnotesize\ttfamily \#define N\+O\+T\+\_\+\+OK~false}
+
+
+
+Definition at line 14 of file H\+T\+T\+P.\+cpp.
+
+\mbox{\Hypertarget{_h_t_t_p_8cpp_aba51915c87d64af47fb1cc59348961c9}\label{_h_t_t_p_8cpp_aba51915c87d64af47fb1cc59348961c9}} 
+\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}!OK@{OK}}
+\index{OK@{OK}!H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+\subsubsection{\texorpdfstring{OK}{OK}}
+{\footnotesize\ttfamily \#define OK~true}
+
+
+
+Definition at line 13 of file H\+T\+T\+P.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_h_t_t_p_8cpp_a98544220d2c2ae44fd57915286ab9474}\label{_h_t_t_p_8cpp_a98544220d2c2ae44fd57915286ab9474}} 
+\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}!callback@{callback}}
+\index{callback@{callback}!H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+\subsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily int callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{values,  }\item[{int}]{number\+\_\+of\+\_\+columns,  }\item[{char $\ast$$\ast$}]{data,  }\item[{char $\ast$$\ast$}]{columns }\end{DoxyParamCaption})}
+
+
+
+Definition at line 260 of file H\+T\+T\+P.\+cpp.
+
+\mbox{\Hypertarget{_h_t_t_p_8cpp_aed44f2a681cec5e1c16558767dcf49e2}\label{_h_t_t_p_8cpp_aed44f2a681cec5e1c16558767dcf49e2}} 
+\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}!G\+E\+T\+\_\+method@{G\+E\+T\+\_\+method}}
+\index{G\+E\+T\+\_\+method@{G\+E\+T\+\_\+method}!H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+\subsubsection{\texorpdfstring{G\+E\+T\+\_\+method()}{GET\_method()}}
+{\footnotesize\ttfamily bool G\+E\+T\+\_\+method (\begin{DoxyParamCaption}\item[{\hyperlink{class_request}{Request} \&}]{request,  }\item[{\hyperlink{class_session}{Session} \&}]{session }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file H\+T\+T\+P.\+cpp.
+
+\mbox{\Hypertarget{_h_t_t_p_8cpp_a29ed7423f3abc01d8193f02adbc6cdf0}\label{_h_t_t_p_8cpp_a29ed7423f3abc01d8193f02adbc6cdf0}} 
+\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}!handle\+\_\+response@{handle\+\_\+response}}
+\index{handle\+\_\+response@{handle\+\_\+response}!H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+\subsubsection{\texorpdfstring{handle\+\_\+response()}{handle\_response()}}
+{\footnotesize\ttfamily void handle\+\_\+response (\begin{DoxyParamCaption}\item[{\hyperlink{class_request}{Request} \&}]{request,  }\item[{std\+::vector$<$ std\+::vector$<$ std\+::string $>$$>$ \&}]{table,  }\item[{const bool}]{status,  }\item[{\hyperlink{class_session}{Session} \&}]{session }\end{DoxyParamCaption})}
+
+
+
+Definition at line 275 of file H\+T\+T\+P.\+cpp.
+
+\mbox{\Hypertarget{_h_t_t_p_8cpp_a35c11bb2e980faa29fa366c73b9962a5}\label{_h_t_t_p_8cpp_a35c11bb2e980faa29fa366c73b9962a5}} 
+\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}!hash\+\_\+password@{hash\+\_\+password}}
+\index{hash\+\_\+password@{hash\+\_\+password}!H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+\subsubsection{\texorpdfstring{hash\+\_\+password()}{hash\_password()}}
+{\footnotesize\ttfamily void hash\+\_\+password (\begin{DoxyParamCaption}\item[{\hyperlink{class_request}{Request} \&}]{request }\end{DoxyParamCaption})}
+
+
+
+Definition at line 233 of file H\+T\+T\+P.\+cpp.
+
+\mbox{\Hypertarget{_h_t_t_p_8cpp_ab0b612902120c5ebca1ddf79efd6b560}\label{_h_t_t_p_8cpp_ab0b612902120c5ebca1ddf79efd6b560}} 
+\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}!P\+O\+S\+T\+\_\+method@{P\+O\+S\+T\+\_\+method}}
+\index{P\+O\+S\+T\+\_\+method@{P\+O\+S\+T\+\_\+method}!H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+\subsubsection{\texorpdfstring{P\+O\+S\+T\+\_\+method()}{POST\_method()}}
+{\footnotesize\ttfamily bool P\+O\+S\+T\+\_\+method (\begin{DoxyParamCaption}\item[{\hyperlink{class_request}{Request} \&}]{request,  }\item[{\hyperlink{class_session}{Session} \&}]{session }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file H\+T\+T\+P.\+cpp.
+
+\mbox{\Hypertarget{_h_t_t_p_8cpp_ad4ef971baba2aa2c19b7e6ac7549e190}\label{_h_t_t_p_8cpp_ad4ef971baba2aa2c19b7e6ac7549e190}} 
+\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}!prepare\+\_\+sql\+\_\+command@{prepare\+\_\+sql\+\_\+command}}
+\index{prepare\+\_\+sql\+\_\+command@{prepare\+\_\+sql\+\_\+command}!H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+\subsubsection{\texorpdfstring{prepare\+\_\+sql\+\_\+command()}{prepare\_sql\_command()}}
+{\footnotesize\ttfamily bool prepare\+\_\+sql\+\_\+command (\begin{DoxyParamCaption}\item[{\hyperlink{class_request}{Request} \&}]{request,  }\item[{\hyperlink{class_session}{Session} \&}]{session,  }\item[{std\+::string \&}]{sql }\end{DoxyParamCaption})}
+
+
+
+Definition at line 132 of file H\+T\+T\+P.\+cpp.
+
+\mbox{\Hypertarget{_h_t_t_p_8cpp_ae45ccebdec61fc5613d0926deee5c0a2}\label{_h_t_t_p_8cpp_ae45ccebdec61fc5613d0926deee5c0a2}} 
+\index{H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}!sha256@{sha256}}
+\index{sha256@{sha256}!H\+T\+T\+P.\+cpp@{H\+T\+T\+P.\+cpp}}
+\subsubsection{\texorpdfstring{sha256()}{sha256()}}
+{\footnotesize\ttfamily void sha256 (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char}]{output\+Buffer\mbox{[}65\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 242 of file H\+T\+T\+P.\+cpp.
+

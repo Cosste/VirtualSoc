@@ -1,0 +1,189 @@
+\hypertarget{class_request}{}\section{Request Class Reference}
+\label{class_request}\index{Request@{Request}}
+
+
+{\ttfamily \#include $<$H\+T\+T\+P.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_request_afaf8d8928de7ffff8a3767589489bd33}{Request} ()
+\item 
+void \hyperlink{class_request_ad4a0a5e5d89b7f1289e98e0c29b5239c}{show\+\_\+options} ()
+\item 
+void \hyperlink{class_request_a7de5ef92f56abd5ed7aa2b78f5dddadb}{parse\+\_\+message} (char \&message)
+\item 
+void \hyperlink{class_request_a8b5ac840837aec546287976a11dc4b1a}{resolve\+\_\+\+U\+R\+I\+\_\+query} ()
+\item 
+void \hyperlink{class_request_a6633a3bac0300e17f356302d6b658ef2}{advanced\+\_\+message\+\_\+parser} (char $\ast$original\+\_\+message)
+\item 
+void \hyperlink{class_request_adc13ade88a8d868013fbc79d7ab645d4}{parse\+\_\+\+J\+S\+ON} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_request_ae81f481b58e82cad7808543f88290903}{method}
+\item 
+std\+::string \hyperlink{class_request_abe4fe525c1b9a1526c848e064c25f88b}{U\+RI}
+\item 
+std\+::string \hyperlink{class_request_ab594227b55eb0af1a4f80d310a088d50}{query}
+\item 
+std\+::string \hyperlink{class_request_a736c2c715b9392706662727a4a353172}{version}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \hyperlink{class_request_a77959ef59eada5eed1db6425ed316f8c}{request\+\_\+options}
+\item 
+std\+::string \hyperlink{class_request_a63759662b44d0dbd16ae45a32aca1afd}{content}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \hyperlink{class_request_a3fbffd427990b4665f86d9c41676dad9}{content\+\_\+\+J\+S\+ON}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file H\+T\+T\+P.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_request_afaf8d8928de7ffff8a3767589489bd33}\label{class_request_afaf8d8928de7ffff8a3767589489bd33}} 
+\index{Request@{Request}!Request@{Request}}
+\index{Request@{Request}!Request@{Request}}
+\subsubsection{\texorpdfstring{Request()}{Request()}}
+{\footnotesize\ttfamily Request\+::\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file H\+T\+T\+P.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_request_a6633a3bac0300e17f356302d6b658ef2}\label{class_request_a6633a3bac0300e17f356302d6b658ef2}} 
+\index{Request@{Request}!advanced\+\_\+message\+\_\+parser@{advanced\+\_\+message\+\_\+parser}}
+\index{advanced\+\_\+message\+\_\+parser@{advanced\+\_\+message\+\_\+parser}!Request@{Request}}
+\subsubsection{\texorpdfstring{advanced\+\_\+message\+\_\+parser()}{advanced\_message\_parser()}}
+{\footnotesize\ttfamily void Request\+::advanced\+\_\+message\+\_\+parser (\begin{DoxyParamCaption}\item[{char $\ast$}]{original\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_adc13ade88a8d868013fbc79d7ab645d4}\label{class_request_adc13ade88a8d868013fbc79d7ab645d4}} 
+\index{Request@{Request}!parse\+\_\+\+J\+S\+ON@{parse\+\_\+\+J\+S\+ON}}
+\index{parse\+\_\+\+J\+S\+ON@{parse\+\_\+\+J\+S\+ON}!Request@{Request}}
+\subsubsection{\texorpdfstring{parse\+\_\+\+J\+S\+O\+N()}{parse\_JSON()}}
+{\footnotesize\ttfamily void Request\+::parse\+\_\+\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_a7de5ef92f56abd5ed7aa2b78f5dddadb}\label{class_request_a7de5ef92f56abd5ed7aa2b78f5dddadb}} 
+\index{Request@{Request}!parse\+\_\+message@{parse\+\_\+message}}
+\index{parse\+\_\+message@{parse\+\_\+message}!Request@{Request}}
+\subsubsection{\texorpdfstring{parse\+\_\+message()}{parse\_message()}}
+{\footnotesize\ttfamily void Request\+::parse\+\_\+message (\begin{DoxyParamCaption}\item[{char \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_a8b5ac840837aec546287976a11dc4b1a}\label{class_request_a8b5ac840837aec546287976a11dc4b1a}} 
+\index{Request@{Request}!resolve\+\_\+\+U\+R\+I\+\_\+query@{resolve\+\_\+\+U\+R\+I\+\_\+query}}
+\index{resolve\+\_\+\+U\+R\+I\+\_\+query@{resolve\+\_\+\+U\+R\+I\+\_\+query}!Request@{Request}}
+\subsubsection{\texorpdfstring{resolve\+\_\+\+U\+R\+I\+\_\+query()}{resolve\_URI\_query()}}
+{\footnotesize\ttfamily void Request\+::resolve\+\_\+\+U\+R\+I\+\_\+query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 129 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_ad4a0a5e5d89b7f1289e98e0c29b5239c}\label{class_request_ad4a0a5e5d89b7f1289e98e0c29b5239c}} 
+\index{Request@{Request}!show\+\_\+options@{show\+\_\+options}}
+\index{show\+\_\+options@{show\+\_\+options}!Request@{Request}}
+\subsubsection{\texorpdfstring{show\+\_\+options()}{show\_options()}}
+{\footnotesize\ttfamily void Request\+::show\+\_\+options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file H\+T\+T\+P.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_request_a63759662b44d0dbd16ae45a32aca1afd}\label{class_request_a63759662b44d0dbd16ae45a32aca1afd}} 
+\index{Request@{Request}!content@{content}}
+\index{content@{content}!Request@{Request}}
+\subsubsection{\texorpdfstring{content}{content}}
+{\footnotesize\ttfamily std\+::string Request\+::content}
+
+
+
+Definition at line 37 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_a3fbffd427990b4665f86d9c41676dad9}\label{class_request_a3fbffd427990b4665f86d9c41676dad9}} 
+\index{Request@{Request}!content\+\_\+\+J\+S\+ON@{content\+\_\+\+J\+S\+ON}}
+\index{content\+\_\+\+J\+S\+ON@{content\+\_\+\+J\+S\+ON}!Request@{Request}}
+\subsubsection{\texorpdfstring{content\+\_\+\+J\+S\+ON}{content\_JSON}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$ Request\+::content\+\_\+\+J\+S\+ON}
+
+
+
+Definition at line 38 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_ae81f481b58e82cad7808543f88290903}\label{class_request_ae81f481b58e82cad7808543f88290903}} 
+\index{Request@{Request}!method@{method}}
+\index{method@{method}!Request@{Request}}
+\subsubsection{\texorpdfstring{method}{method}}
+{\footnotesize\ttfamily std\+::string Request\+::method}
+
+
+
+Definition at line 32 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_ab594227b55eb0af1a4f80d310a088d50}\label{class_request_ab594227b55eb0af1a4f80d310a088d50}} 
+\index{Request@{Request}!query@{query}}
+\index{query@{query}!Request@{Request}}
+\subsubsection{\texorpdfstring{query}{query}}
+{\footnotesize\ttfamily std\+::string Request\+::query}
+
+
+
+Definition at line 34 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_a77959ef59eada5eed1db6425ed316f8c}\label{class_request_a77959ef59eada5eed1db6425ed316f8c}} 
+\index{Request@{Request}!request\+\_\+options@{request\+\_\+options}}
+\index{request\+\_\+options@{request\+\_\+options}!Request@{Request}}
+\subsubsection{\texorpdfstring{request\+\_\+options}{request\_options}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$ Request\+::request\+\_\+options}
+
+
+
+Definition at line 36 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_abe4fe525c1b9a1526c848e064c25f88b}\label{class_request_abe4fe525c1b9a1526c848e064c25f88b}} 
+\index{Request@{Request}!U\+RI@{U\+RI}}
+\index{U\+RI@{U\+RI}!Request@{Request}}
+\subsubsection{\texorpdfstring{U\+RI}{URI}}
+{\footnotesize\ttfamily std\+::string Request\+::\+U\+RI}
+
+
+
+Definition at line 33 of file H\+T\+T\+P.\+hpp.
+
+\mbox{\Hypertarget{class_request_a736c2c715b9392706662727a4a353172}\label{class_request_a736c2c715b9392706662727a4a353172}} 
+\index{Request@{Request}!version@{version}}
+\index{version@{version}!Request@{Request}}
+\subsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily std\+::string Request\+::version}
+
+
+
+Definition at line 35 of file H\+T\+T\+P.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_h_t_t_p_8hpp}{H\+T\+T\+P.\+hpp}\end{DoxyCompactItemize}

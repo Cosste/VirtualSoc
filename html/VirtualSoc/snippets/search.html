@@ -1,0 +1,10 @@
+<div class="containter">
+    <div class="row">
+        <h3 class="col-md-12 text-center">Search results:</h3>
+        <div class="col-md-12" ng-repeat="post in search_results">
+            <div class="row">
+                <div class="col-md-12"><a ng-href="/user/{{post.content}}">{{post.content}}</a></div>
+            </div>
+        </div>
+    </div>
+</div>

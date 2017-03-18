@@ -1,0 +1,182 @@
+\hypertarget{server_8cpp}{}\section{server.\+cpp File Reference}
+\label{server_8cpp}\index{server.\+cpp@{server.\+cpp}}
+{\ttfamily \#include \char`\"{}H\+T\+T\+P.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}H\+T\+T\+P.\+cpp\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{server_8cpp_acf87f9ad972e4c0fc668d675b5c55b32}{server\+\_\+hpp}
+\item 
+\#define \hyperlink{server_8cpp_a614217d263be1fb1a5f76e2ff7be19a2}{P\+O\+RT}~2024
+\item 
+\#define \hyperlink{server_8cpp_a5b7d91117d4c1062870979c5ab5b9d84}{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+B\+U\+F\+F\+ER}~8192
+\item 
+\#define \hyperlink{server_8cpp_a6f133f77a2d70df9bc976a076b045a46}{R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+ER}~4096
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{server_8cpp_a93b1cf6b12e987e7bd8a2a18bde5b016}{starting\+\_\+server} (int \&socket\+\_\+descriptor, struct sockaddr\+\_\+in \&server, struct sockaddr\+\_\+in \&from)
+\item 
+void \hyperlink{server_8cpp_a4a68b09d0cbd630762dcbcae1e77d1be}{service} (int \&socket\+\_\+descriptor, struct sockaddr\+\_\+in \&server, struct sockaddr\+\_\+in \&from)
+\item 
+void \hyperlink{server_8cpp_ad95b39eb5f6f2c944fbd0030b66695d1}{request\+\_\+header\+\_\+parser} (char \&message, \hyperlink{class_request}{Request} \&request)
+\item 
+short int \hyperlink{server_8cpp_aec3f3b57043dec19f83f4c5f80355be4}{request\+\_\+parser} (\hyperlink{class_request}{Request} \&request, \hyperlink{class_session}{Session} \&session)
+\item 
+bool \hyperlink{server_8cpp_a3df48179dab529f2e5b69314991bc167}{send\+\_\+response} (\hyperlink{class_request}{Request} \&request, \hyperlink{class_session}{Session} \&session)
+\item 
+bool \hyperlink{server_8cpp_a10bccee609a2f150e74d292b96cdb178}{connect\+\_\+session} (int client, S\+SL $\ast$ssl)
+\item 
+void \hyperlink{server_8cpp_a5f7aedaae2ac3e93d4d54d444fb2c50d}{init\+\_\+openssl} ()
+\item 
+void \hyperlink{server_8cpp_acffc20c5feb0bed940c823cca4c1f121}{cleanup\+\_\+openssl} ()
+\item 
+S\+S\+L\+\_\+\+C\+TX $\ast$ \hyperlink{server_8cpp_a5b40fa22a22409707f7cfe6dfc771f0f}{create\+\_\+context} ()
+\item 
+void \hyperlink{server_8cpp_ac058dd06ab90e90d03700b2d8a190c03}{configure\+\_\+context} (S\+S\+L\+\_\+\+C\+TX $\ast$ctx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{server_8cpp_a614217d263be1fb1a5f76e2ff7be19a2}\label{server_8cpp_a614217d263be1fb1a5f76e2ff7be19a2}} 
+\index{server.\+cpp@{server.\+cpp}!P\+O\+RT@{P\+O\+RT}}
+\index{P\+O\+RT@{P\+O\+RT}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{P\+O\+RT}{PORT}}
+{\footnotesize\ttfamily \#define P\+O\+RT~2024}
+
+
+
+Definition at line 10 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_a6f133f77a2d70df9bc976a076b045a46}\label{server_8cpp_a6f133f77a2d70df9bc976a076b045a46}} 
+\index{server.\+cpp@{server.\+cpp}!R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+ER@{R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\index{R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+ER@{R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+ER}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+ER}{RECEIVE\_BUFFER}}
+{\footnotesize\ttfamily \#define R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+ER~4096}
+
+
+
+Definition at line 14 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_a5b7d91117d4c1062870979c5ab5b9d84}\label{server_8cpp_a5b7d91117d4c1062870979c5ab5b9d84}} 
+\index{server.\+cpp@{server.\+cpp}!R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+B\+U\+F\+F\+ER@{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\index{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+B\+U\+F\+F\+ER@{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+B\+U\+F\+F\+ER}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+B\+U\+F\+F\+ER}{RESPONSE\_BUFFER}}
+{\footnotesize\ttfamily \#define R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+B\+U\+F\+F\+ER~8192}
+
+
+
+Definition at line 13 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_acf87f9ad972e4c0fc668d675b5c55b32}\label{server_8cpp_acf87f9ad972e4c0fc668d675b5c55b32}} 
+\index{server.\+cpp@{server.\+cpp}!server\+\_\+hpp@{server\+\_\+hpp}}
+\index{server\+\_\+hpp@{server\+\_\+hpp}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{server\+\_\+hpp}{server\_hpp}}
+{\footnotesize\ttfamily \#define server\+\_\+hpp}
+
+
+
+Definition at line 2 of file server.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{server_8cpp_acffc20c5feb0bed940c823cca4c1f121}\label{server_8cpp_acffc20c5feb0bed940c823cca4c1f121}} 
+\index{server.\+cpp@{server.\+cpp}!cleanup\+\_\+openssl@{cleanup\+\_\+openssl}}
+\index{cleanup\+\_\+openssl@{cleanup\+\_\+openssl}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{cleanup\+\_\+openssl()}{cleanup\_openssl()}}
+{\footnotesize\ttfamily void cleanup\+\_\+openssl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 203 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_ac058dd06ab90e90d03700b2d8a190c03}\label{server_8cpp_ac058dd06ab90e90d03700b2d8a190c03}} 
+\index{server.\+cpp@{server.\+cpp}!configure\+\_\+context@{configure\+\_\+context}}
+\index{configure\+\_\+context@{configure\+\_\+context}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{configure\+\_\+context()}{configure\_context()}}
+{\footnotesize\ttfamily void configure\+\_\+context (\begin{DoxyParamCaption}\item[{S\+S\+L\+\_\+\+C\+TX $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Definition at line 226 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_a10bccee609a2f150e74d292b96cdb178}\label{server_8cpp_a10bccee609a2f150e74d292b96cdb178}} 
+\index{server.\+cpp@{server.\+cpp}!connect\+\_\+session@{connect\+\_\+session}}
+\index{connect\+\_\+session@{connect\+\_\+session}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{connect\+\_\+session()}{connect\_session()}}
+{\footnotesize\ttfamily bool connect\+\_\+session (\begin{DoxyParamCaption}\item[{int}]{client,  }\item[{S\+SL $\ast$}]{ssl }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_a5b40fa22a22409707f7cfe6dfc771f0f}\label{server_8cpp_a5b40fa22a22409707f7cfe6dfc771f0f}} 
+\index{server.\+cpp@{server.\+cpp}!create\+\_\+context@{create\+\_\+context}}
+\index{create\+\_\+context@{create\+\_\+context}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{create\+\_\+context()}{create\_context()}}
+{\footnotesize\ttfamily S\+S\+L\+\_\+\+C\+TX $\ast$ create\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 208 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_a5f7aedaae2ac3e93d4d54d444fb2c50d}\label{server_8cpp_a5f7aedaae2ac3e93d4d54d444fb2c50d}} 
+\index{server.\+cpp@{server.\+cpp}!init\+\_\+openssl@{init\+\_\+openssl}}
+\index{init\+\_\+openssl@{init\+\_\+openssl}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{init\+\_\+openssl()}{init\_openssl()}}
+{\footnotesize\ttfamily void init\+\_\+openssl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_ad95b39eb5f6f2c944fbd0030b66695d1}\label{server_8cpp_ad95b39eb5f6f2c944fbd0030b66695d1}} 
+\index{server.\+cpp@{server.\+cpp}!request\+\_\+header\+\_\+parser@{request\+\_\+header\+\_\+parser}}
+\index{request\+\_\+header\+\_\+parser@{request\+\_\+header\+\_\+parser}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{request\+\_\+header\+\_\+parser()}{request\_header\_parser()}}
+{\footnotesize\ttfamily void request\+\_\+header\+\_\+parser (\begin{DoxyParamCaption}\item[{char \&}]{message,  }\item[{\hyperlink{class_request}{Request} \&}]{request }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{server_8cpp_aec3f3b57043dec19f83f4c5f80355be4}\label{server_8cpp_aec3f3b57043dec19f83f4c5f80355be4}} 
+\index{server.\+cpp@{server.\+cpp}!request\+\_\+parser@{request\+\_\+parser}}
+\index{request\+\_\+parser@{request\+\_\+parser}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{request\+\_\+parser()}{request\_parser()}}
+{\footnotesize\ttfamily short int request\+\_\+parser (\begin{DoxyParamCaption}\item[{\hyperlink{class_request}{Request} \&}]{request,  }\item[{\hyperlink{class_session}{Session} \&}]{session }\end{DoxyParamCaption})}
+
+
+
+Definition at line 152 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_a3df48179dab529f2e5b69314991bc167}\label{server_8cpp_a3df48179dab529f2e5b69314991bc167}} 
+\index{server.\+cpp@{server.\+cpp}!send\+\_\+response@{send\+\_\+response}}
+\index{send\+\_\+response@{send\+\_\+response}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{send\+\_\+response()}{send\_response()}}
+{\footnotesize\ttfamily bool send\+\_\+response (\begin{DoxyParamCaption}\item[{\hyperlink{class_request}{Request} \&}]{request,  }\item[{\hyperlink{class_session}{Session} \&}]{session }\end{DoxyParamCaption})}
+
+
+
+Definition at line 181 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_a4a68b09d0cbd630762dcbcae1e77d1be}\label{server_8cpp_a4a68b09d0cbd630762dcbcae1e77d1be}} 
+\index{server.\+cpp@{server.\+cpp}!service@{service}}
+\index{service@{service}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{service()}{service()}}
+{\footnotesize\ttfamily void service (\begin{DoxyParamCaption}\item[{int \&}]{socket\+\_\+descriptor,  }\item[{struct sockaddr\+\_\+in \&}]{server,  }\item[{struct sockaddr\+\_\+in \&}]{from }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file server.\+cpp.
+
+\mbox{\Hypertarget{server_8cpp_a93b1cf6b12e987e7bd8a2a18bde5b016}\label{server_8cpp_a93b1cf6b12e987e7bd8a2a18bde5b016}} 
+\index{server.\+cpp@{server.\+cpp}!starting\+\_\+server@{starting\+\_\+server}}
+\index{starting\+\_\+server@{starting\+\_\+server}!server.\+cpp@{server.\+cpp}}
+\subsubsection{\texorpdfstring{starting\+\_\+server()}{starting\_server()}}
+{\footnotesize\ttfamily int starting\+\_\+server (\begin{DoxyParamCaption}\item[{int \&}]{socket\+\_\+descriptor,  }\item[{struct sockaddr\+\_\+in \&}]{server,  }\item[{struct sockaddr\+\_\+in \&}]{from }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file server.\+cpp.
+

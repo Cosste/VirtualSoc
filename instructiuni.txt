@@ -1,0 +1,15 @@
+Comanda pentru compilare: 
+g++ main.cpp -std=c++11 -lssl -lcrypto -pthread -lsqlite3 -o server.bin
+
+Libarii necesare:
+- openssl (sudo apt-get install libssl-dev)
+- sqlite3 (sudo apt-get install sqlite3 libsqlite3-dev)
+
+Rulare:
+server: ./server.bin
+client: in orice browser: https://127.0.0.1:2024
+
+Utilizare:
+Prima pagina va fi pagina de login cu un link spre pagina de inregistrare pentru noi utilizatori precum si bara de search (dupa pattern) pentru utlizatorii care si-au setat profilul ca public.
+Utilizatorii deja inregistrati sunt: user1 si user2 cu parolele user1 si respectiv user2
+Dupa logare utilizatorul isi va vedea propria pagina cu postari, va putea sa faca postari sau va putea sa navigheze spre profilul celorlalti utilizatori si vedea postari in functie de relatie pe care o are cu acestia, precum si de pe pagina altui utilizator sa porneasca cu acesta o sesiune de comunicare privata.
